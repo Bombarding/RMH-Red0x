@@ -46,6 +46,12 @@ sudo ./mongo (client) (in new terminal)
 > Install bower: sudo npm install -g bower
 
 > Grunt install: npm install -g grunt-cli
+> Download Jquery: sudo npm install jquery
+            		bower install jquery
+> Download Angular: sudo npm install angular
+            		bower install angular
+> Download Mongoose: sudo npm install mongoose
+			bower install mongoose
 
 > Launch localhost@8000: grunt serve
 
