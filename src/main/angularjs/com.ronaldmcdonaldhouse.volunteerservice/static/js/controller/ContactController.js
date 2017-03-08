@@ -1,1 +1,3 @@
-volunteerService.controller('ContactController', ["$scope", function($scope, $http) {console.log('Contact Controller');}]);
+volunteerService.controller('ContactController', ["$scope", function($scope, $http) {
+    console.log('Contact Controller');
+}]);

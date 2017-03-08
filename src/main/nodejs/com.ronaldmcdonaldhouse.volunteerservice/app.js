@@ -18,7 +18,7 @@ var multer = require('multer');
  * Mongoose ORM for MongoDB
  */
 mongoose.connect('mongodb://localhost/volunteerservice')
-//**TODODOTODOTODOTODOTODO*/
+
 var app = express();
 
 app.use(bodyParser.json()); // for parsing application/json

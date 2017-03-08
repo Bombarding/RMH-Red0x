@@ -1,1 +1,3 @@
-volunteerService.controller('HomeController', ["$scope", function($scope, $http) {console.log('Home Controller');}]);
+volunteerService.controller('HomeController', ["$scope", function($scope, $http) {
+    console.log('Home Controller');
+}]);
