@@ -33,4 +33,10 @@
     "jquery": "~2.1.4",
     "angular": ">=1.4.x"
   }
+  "ToDo" : {
+  	"Red0x" : "True ~2.0.2",
+  	"mongodb" : "True",
+  	"servercon-db" : "True",
+  	"db-backup" : "False"
+  }
 }

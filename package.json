@@ -35,4 +35,12 @@
     "type": "git",
     "url": "git://github.com/angular-ui/ui-calendar.git"
   }
+  "ToDo" : {
+  	"Red0x" : "True ~2.0.2",
+  	"mongodb" : "True",
+  	"servercon-db" : "True",
+  	"db-backup" : "False",
+  	"type": "git",
+    "url": "git://github.com/Bombarding/RMH-Red0x.git"
+  }
 }
