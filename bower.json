@@ -1,7 +1,7 @@
 {
   "name": "volunteer-service",
   "version": "2.0.2",
-  "description": "Volunteer Service AngularJS Application for The Ronald McDonald House of Central Indiana",
+  "description": "Volunteer Service",
   "author": "Alexander Steel",
   "license": "MIT",
   "homepage": "http://www.rmhccin.org/",
@@ -32,11 +32,5 @@
   "resolutions": {
     "jquery": "~2.1.4",
     "angular": ">=1.4.x"
-  }
-  "ToDo" : {
-  	"Red0x" : "True ~2.0.2",
-  	"mongodb" : "True",
-  	"servercon-db" : "True",
-  	"db-backup" : "False"
   }
 }

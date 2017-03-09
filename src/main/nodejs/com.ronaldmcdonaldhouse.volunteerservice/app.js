@@ -13,11 +13,7 @@ var express = require('express');
 var methodOverride = require('method-override');
 var mongoose = require('mongoose');
 var multer = require('multer');
-
-/**
- * Mongoose ORM for MongoDB
- */
-mongoose.connect('mongodb://localhost/volunteerservice')
+mongoose.connect('localhost:27017/test');
 
 var app = express();
 

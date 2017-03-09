@@ -1,25 +1,8 @@
-/*
-"ToDo" : {
-  	"Red0x" : "True ~2.0.2",
-  	"mongodb" : "True",
-  	"servercon-db" : "True",
-  	"db-backup" : "False"
-  }
-*/
-
 module.exports = function (grunt) {
     "use strict";
-
-    // load all grunt tasks
     require('load-grunt-tasks')(grunt);
-
-    // Default task.
     grunt.registerTask('default', ['jshint', 'jscs', 'karma']);
-
-    // uglify
     grunt.registerTask('minify', ['uglify']);
-
-    //connect - local server
     grunt.registerTask('serve', ['connect']);
 
     var testConfig = function (configFile, customOptions) {
@@ -28,17 +11,16 @@ module.exports = function (grunt) {
             keepalive : true
         };
         var travisOptions = process.env.TRAVIS && {
-            browsers : ['Firefox'],
+            browsers : ['Safari'],
             reporters : 'dots'
         };
         return grunt.util._.extend(options, customOptions, travisOptions);
     };
 
-    // Project configuration.
     grunt.initConfig({
         karma : {
             unit : {
-                options : testConfig('test/test.conf.js')
+                options : testConfig('karma.conf.js')
             }
         },
         jshint : {
@@ -87,7 +69,7 @@ module.exports = function (grunt) {
         connect : {
             server : {
                 options : {
-                    port : 8000,
+                    port : 27018,
                     open : true,
                     debug : true,
                     keepalive : true,
