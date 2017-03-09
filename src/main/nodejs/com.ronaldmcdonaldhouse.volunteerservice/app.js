@@ -7,9 +7,9 @@ var express = require('express');
 var methodOverride = require('method-override');
 var mongoose = require('mongoose');
 var multer = require('multer');
-mongoose.connect('mongodb://127.0.0.1:27017/test');
+//mongoose.connect('mongodb://127.0.0.1:27017/test');
 //mongoose.connect('mongodb://localhost:27017/test');
-//mongoose.connect('127.0.0.1:27017/test');
+mongoose.connect('127.0.0.1:27017/test');
 //mongoose.connect('localhost:27017/test');
 var app = express();
 
