@@ -1,0 +1,2 @@
+WARN [watcher]: Pattern "/Users/Alex/RMH-Red0x/node_modules/angular-mocks/angular-mocks.js" does not match any file.
+WARN [watcher]: Pattern "/Users/Alex/RMH-Red0x/test/unit/**/*.spec.js" does not match any file.
