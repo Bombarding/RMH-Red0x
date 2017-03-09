@@ -1,10 +1,4 @@
-/**
- * Ronald McDonald House - Volunteer Service Server
- */
 
-/**
- * Dependencies
- */
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var cors = require("cors");
@@ -13,10 +7,13 @@ var express = require('express');
 var methodOverride = require('method-override');
 var mongoose = require('mongoose');
 var multer = require('multer');
-mongoose.connect('localhost:27017/test');
-
+mongoose.connect('mongodb://127.0.0.1:27017/test');
+//mongoose.connect('mongodb://localhost:27017/test');
+//mongoose.connect('127.0.0.1:27017/test');
+//mongoose.connect('localhost:27017/test');
 var app = express();
 
+//Possible fix
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 app.use(cookieParser('secret'));

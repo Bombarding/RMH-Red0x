@@ -56,6 +56,8 @@ sudo ./mongo (client) (in new terminal)
 					bower install moment
 > Download bootstrap: sudo npm install bootsrap
 					bower install bootsrap
+> Download Express: sudo npm install express
+					bower install express
 
 > Launch localhost@8000: grunt serve
 
