@@ -58,6 +58,8 @@ sudo ./mongo (client) (in new terminal)
 					bower install bootsrap
 > Download Express: sudo npm install express
 					bower install express
+> Download Jasmine: sudo npm install -g jasmine
+					bower install jasmine
 
 > Launch localhost@8000: grunt serve
 
