@@ -1,0 +1,181 @@
+Alexanders-MacBook-Pro ☢  ~/RMH-Red0x ➤ c265a31|master✓
+1039 ± : ls                                                               [29m]
+LICENSE                   coverage                  node_modules
+README.md                 dist                      package.json
+angular-material-calendar gruntFile.js              src
+bower.json                gulpfile.js
+bower_components          karma.conf.js
+
+Alexanders-MacBook-Pro ☢  ~/RMH-Red0x ➤ c265a31|master✓
+1040 ± : rubocop                                                          [29m]
+Inspecting 8 files
+.CCCCCCC
+
+Offenses:
+
+node_modules/coffee-script/Rakefile:7:6: C: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+desc "Build the documentation page"
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+node_modules/coffee-script/Rakefile:10:23: C: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  child = fork { exec "bin/coffee -bcw -o documentation/js documentation/coffee/*.coffee" }
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+node_modules/coffee-script/Rakefile:10:81: C: Line is too long. [91/80]
+  child = fork { exec "bin/coffee -bcw -o documentation/js documentation/coffee/*.coffee" }
+                                                                                ^^^^^^^^^^^
+node_modules/coffee-script/Rakefile:11:26: C: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  at_exit { Process.kill("INT", child) }
+                         ^^^^^
+node_modules/coffee-script/Rakefile:12:15: C: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  Signal.trap("INT") { exit }
+              ^^^^^
+node_modules/coffee-script/Rakefile:17:37: C: Space between { and | missing.
+      File.open('index.html', 'w+') {|f| f.write(rendered) }
+                                    ^^
+node_modules/coffee-script/Rakefile:24:6: C: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+desc "Build coffee-script-source gem"
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+node_modules/coffee-script/Rakefile:25:1: C: Block has too many lines. [45/25]
+task :gem do ...
+^^^^^^^^^^^^
+node_modules/coffee-script/Rakefile:31:57: C: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    s.version   = JSON.parse(File.read('package.json'))["version"]
+                                                        ^^^^^^^^^
+node_modules/coffee-script/Rakefile:32:37: C: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    s.date      = Time.now.strftime("%Y-%m-%d")
+                                    ^^^^^^^^^^
+node_modules/coffee-script/Rakefile:34:21: C: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    s.homepage    = "http://jashkenas.github.com/coffee-script/"
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+node_modules/coffee-script/Rakefile:35:21: C: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    s.summary     = "The CoffeeScript Compiler"
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+node_modules/coffee-script/Rakefile:54:20: C: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  file = File.open("coffee-script-source.gem", "w")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^
+node_modules/coffee-script/Rakefile:54:48: C: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  file = File.open("coffee-script-source.gem", "w")
+                                               ^^^
+node_modules/coffee-script/Rakefile:58:12: C: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    path = "lib/coffee_script/source.rb"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+node_modules/coffee-script/Rakefile:68:31: C: Use 0o for octal literals.
+    pkg.add_file_simple(path, 0644, contents.size) do |tar_io|
+                              ^^^^
+node_modules/coffee-script/Rakefile:72:26: C: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    contents = File.read("extras/coffee-script.js")
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+node_modules/coffee-script/Rakefile:73:12: C: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+    path = "lib/coffee_script/coffee-script.js"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+node_modules/coffee-script/Rakefile:74:31: C: Use 0o for octal literals.
+    pkg.add_file_simple(path, 0644, contents.size) do |tar_io|
+                              ^^^^
+node_modules/grunt-legacy-log/node_modules/underscore.string/Gemfile:1:8: C: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+source "https://rubygems.org"
+       ^^^^^^^^^^^^^^^^^^^^^^
+node_modules/grunt-legacy-log/node_modules/underscore.string/Gemfile:4:1: C: Gems should be sorted in an alphabetical order within their section of the Gemfile. Gem rake should appear before uglifier.
+gem 'rake'
+^^^^^^^^^^
+node_modules/grunt-legacy-log/node_modules/underscore.string/Rakefile:7:50: C: Use the new Ruby 1.9 hash syntax.
+  source = File.read('lib/underscore.string.js', :encoding => 'utf-8')
+                                                 ^^^^^^^^^^^^
+node_modules/grunt-legacy-log/node_modules/underscore.string/Rakefile:9:50: C: Space missing to the left of {.
+  File.open('dist/underscore.string.min.js', 'w'){ |f| f.write compressed }
+                                                 ^
+node_modules/grunt-legacy-log/node_modules/underscore.string/Rakefile:10:44: C: Surrounding space missing for operator /.
+  compression_rate = compressed.length.to_f/source.length
+                                           ^
+node_modules/grunt-legacy-log/node_modules/underscore.string/Rakefile:11:81: C: Line is too long. [123/80]
+  puts "compressed dist/underscore.string.min.js: #{compressed.length}/#{source.length} #{(compression_rate * 100).round}%"
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+node_modules/grunt-legacy-log/node_modules/underscore.string/Rakefile:16:8: C: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  puts "Running underscore.string test suite."
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+node_modules/grunt-legacy-log/node_modules/underscore.string/Rakefile:17:20: C: %-literals should be delimited by ( and ).
+  result1 = system %{phantomjs ./test/run-qunit.js "test/test.html"}
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+node_modules/grunt-legacy-log/node_modules/underscore.string/Rakefile:19:8: C: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  puts "Running Underscore test suite."
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+node_modules/grunt-legacy-log/node_modules/underscore.string/Rakefile:20:20: C: %-literals should be delimited by ( and ).
+  result2 = system %{phantomjs ./test/run-qunit.js "test/test_underscore/index.html"}
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+node_modules/grunt-legacy-log/node_modules/underscore.string/Rakefile:20:81: C: Line is too long. [85/80]
+  result2 = system %{phantomjs ./test/run-qunit.js "test/test_underscore/index.html"}
+                                                                                ^^^^^
+node_modules/grunt-legacy-log-utils/node_modules/underscore.string/Gemfile:1:8: C: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+source "https://rubygems.org"
+       ^^^^^^^^^^^^^^^^^^^^^^
+node_modules/grunt-legacy-log-utils/node_modules/underscore.string/Gemfile:4:1: C: Gems should be sorted in an alphabetical order within their section of the Gemfile. Gem rake should appear before uglifier.
+gem 'rake'
+^^^^^^^^^^
+node_modules/grunt-legacy-log-utils/node_modules/underscore.string/Rakefile:7:50: C: Use the new Ruby 1.9 hash syntax.
+  source = File.read('lib/underscore.string.js', :encoding => 'utf-8')
+                                                 ^^^^^^^^^^^^
+node_modules/grunt-legacy-log-utils/node_modules/underscore.string/Rakefile:9:50: C: Space missing to the left of {.
+  File.open('dist/underscore.string.min.js', 'w'){ |f| f.write compressed }
+                                                 ^
+node_modules/grunt-legacy-log-utils/node_modules/underscore.string/Rakefile:10:44: C: Surrounding space missing for operator /.
+  compression_rate = compressed.length.to_f/source.length
+                                           ^
+node_modules/grunt-legacy-log-utils/node_modules/underscore.string/Rakefile:11:81: C: Line is too long. [123/80]
+  puts "compressed dist/underscore.string.min.js: #{compressed.length}/#{source.length} #{(compression_rate * 100).round}%"
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+node_modules/grunt-legacy-log-utils/node_modules/underscore.string/Rakefile:16:8: C: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  puts "Running underscore.string test suite."
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+node_modules/grunt-legacy-log-utils/node_modules/underscore.string/Rakefile:17:20: C: %-literals should be delimited by ( and ).
+  result1 = system %{phantomjs ./test/run-qunit.js "test/test.html"}
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+node_modules/grunt-legacy-log-utils/node_modules/underscore.string/Rakefile:19:8: C: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  puts "Running Underscore test suite."
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+node_modules/grunt-legacy-log-utils/node_modules/underscore.string/Rakefile:20:20: C: %-literals should be delimited by ( and ).
+  result2 = system %{phantomjs ./test/run-qunit.js "test/test_underscore/index.html"}
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+node_modules/grunt-legacy-log-utils/node_modules/underscore.string/Rakefile:20:81: C: Line is too long. [85/80]
+  result2 = system %{phantomjs ./test/run-qunit.js "test/test_underscore/index.html"}
+                                                                                ^^^^^
+node_modules/underscore.string/Gemfile:5:1: C: Gems should be sorted in an alphabetical order within their section of the Gemfile. Gem rake should appear before uglifier.
+gem 'rake'
+^^^^^^^^^^
+node_modules/underscore.string/Gemfile:5:11: C: Final newline missing.
+gem 'rake'
+          
+node_modules/underscore.string/Rakefile:9:50: C: Space missing to the left of {.
+  File.open('dist/underscore.string.min.js', 'w'){ |f| f.write compressed }
+                                                 ^
+node_modules/underscore.string/Rakefile:10:44: C: Surrounding space missing for operator /.
+  compression_rate = compressed.length.to_f/source.length
+                                           ^
+node_modules/underscore.string/Rakefile:11:81: C: Line is too long. [123/80]
+  puts "compressed dist/underscore.string.min.js: #{compressed.length}/#{source.length} #{(compression_rate * 100).round}%"
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+node_modules/underscore.string/Rakefile:19:8: C: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  puts "Running underscore.string test suite."
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+node_modules/underscore.string/Rakefile:20:20: C: %-literals should be delimited by ( and ).
+  result1 = system %{phantomjs ./test/run-qunit.js "http://localhost:4000/test/test.html"}
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+node_modules/underscore.string/Rakefile:20:89: C: Line is too long. [90/80]
+  result1 = system %{phantomjs ./test/run-qunit.js "http://localhost:4000/test/test.html"}
+                                                                                        ^^
+node_modules/underscore.string/Rakefile:22:8: C: Prefer single-quoted strings when you don't need string interpolation or special symbols.
+  puts "Running Underscore test suite."
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+node_modules/underscore.string/Rakefile:23:20: C: %-literals should be delimited by ( and ).
+  result2 = system %{phantomjs ./test/run-qunit.js "http://localhost:4000/test/test_underscore/test.html"}
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+node_modules/underscore.string/Rakefile:23:105: C: Line is too long. [106/80]
+  result2 = system %{phantomjs ./test/run-qunit.js "http://localhost:4000/test/test_underscore/test.html"}
+                                                                                                        ^^
+node_modules/underscore.string/Rakefile:24:1: C: Trailing whitespace detected.
+node_modules/underscore.string/Rakefile:26:1: C: Trailing whitespace detected.
+node_modules/underscore.string/Rakefile:28:4: C: Final newline missing.
+end
+   
+
+8 files inspected, 55 offenses detected
+
+Alexanders-MacBook-Pro ☢  ~/RMH-Red0x ➤ c265a31|master✓
+1041 ± :                                                            
