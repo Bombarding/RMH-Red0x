@@ -78,12 +78,13 @@ module.exports = function (grunt) {
         connect : {
             server : {
                 options : {
-                    port : 27017,
+                    port : 27018,
                     open : true,
                     debug : true,
                     keepalive : true,
                     hostname : '*',
-                    base : ['src/main/angularjs/com.ronaldmcdonaldhouse.volunteerservice/static', '.']
+                    base : ['src/main/angularjs/com.ronaldmcdonaldhouse.volunteerservice/static', '.'],
+                    db : '127.0.0.1:27017/data/db/test'
                 }
             }
         }
