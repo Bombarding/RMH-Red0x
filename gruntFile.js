@@ -1,8 +1,16 @@
 module.exports = function (grunt) {
     "use strict";
+
+    // load all grunt tasks
     require('load-grunt-tasks')(grunt);
+
+    // Default task.
     grunt.registerTask('default', ['jshint', 'jscs', 'karma']);
+
+    // uglify
     grunt.registerTask('minify', ['uglify']);
+
+    //connect - local server
     grunt.registerTask('serve', ['connect']);
 
     var testConfig = function (configFile, customOptions) {
@@ -11,16 +19,17 @@ module.exports = function (grunt) {
             keepalive : true
         };
         var travisOptions = process.env.TRAVIS && {
-            browsers : ['Safari'],
-            reporters : 'dots'
-        };
+                browsers : ['Safari'],
+                reporters : 'dots'
+            };
         return grunt.util._.extend(options, customOptions, travisOptions);
     };
 
+    // Project configuration.
     grunt.initConfig({
         karma : {
             unit : {
-                options : testConfig('karma.conf.js')
+                options : testConfig('test/test.conf.js')
             }
         },
         jshint : {

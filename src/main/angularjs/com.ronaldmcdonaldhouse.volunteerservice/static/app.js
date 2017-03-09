@@ -1,4 +1,6 @@
-//Updating Docx
+/**
+ * volunteerService 1.0.0
+ */
 var volunteerService = angular.module('volunteerService', ['ui.router', 'ui.calendar', 'ui.bootstrap']);
 
 volunteerService.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {

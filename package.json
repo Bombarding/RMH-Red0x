@@ -1,23 +1,22 @@
 {
   "name": "volunteer-service",
   "version": "2.0.2",
-  "description": "Volunteer Service",
+  "description": "Volunteer Service Node.js Server/API for The Ronald McDonald House of Central Indiana",
   "author": "Alexander Steel",
   "license": "MIT",
   "homepage": "http://www.rmhccin.org/",
   "main": "src/main/node.js/com.ronaldmcdonaldhouse.volunteerservice/server/www.js",
   "dependencies": {
     "angular-material-calendar": "^0.2.14",
-    "fullcalendar": "~2.7.1",
-    "multer": "^1.3.0"
+    "fullcalendar": "~2.7.1"
   },
   "devDependencies": {
     "bower": "latest",
     "grunt": "^0.4.5",
     "grunt-cli": "latest",
     "grunt-contrib-connect": "^0.10.1",
-    "grunt-contrib-jshint": "^0.11.3",
-    "grunt-contrib-uglify": "^0.9.2",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-uglify": "^0.9.1",
     "grunt-jscs": "^2.8.0",
     "grunt-karma": "^0.11.1",
     "jasmine-core": "^2.3.4",

@@ -1,4 +1,3 @@
-/*Dox*/
 /**
  * Calendar Model
  */

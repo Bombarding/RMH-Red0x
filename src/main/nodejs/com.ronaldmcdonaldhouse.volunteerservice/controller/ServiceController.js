@@ -1,5 +1,3 @@
-/*Dox*/
-
 /**
  * Dependencies
  */

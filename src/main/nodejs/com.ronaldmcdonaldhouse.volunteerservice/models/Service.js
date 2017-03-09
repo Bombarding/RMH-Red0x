@@ -1,4 +1,3 @@
-/*Dox*/
 /**
  * Service Model
  */
