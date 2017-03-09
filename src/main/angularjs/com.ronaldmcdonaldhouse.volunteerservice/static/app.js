@@ -43,4 +43,16 @@ volunteerService.config(["$stateProvider", "$urlRouterProvider", function($state
                 }
             }
         });
+        .state("meals", {
+            url: "/meals",
+            views: {
+                "": {
+                    templateUrl: "view/meals.html",
+                    controller: "MealsController",
+                    data: {
+                        css: 'css/meals.css'
+                    }
+                }
+            }
+        });
 }]);
