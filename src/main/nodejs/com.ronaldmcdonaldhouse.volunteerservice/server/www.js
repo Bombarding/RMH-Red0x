@@ -1,5 +1,4 @@
 /*Dox Update*/
-#!/usr/bin/env node
 
 /**
  * Dependencies.
