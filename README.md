@@ -60,6 +60,12 @@ sudo ./mongo (client) (in new terminal)
 					bower install express
 > Download Jasmine: sudo npm install -g jasmine
 					bower install jasmine
+> Dev Updates:?
+	npm install grunt-contrib-connect --save-dev
+	npm install grunt-contrib-jshint --save-dev
+	npm install grunt-contrib-uglify --save-dev
+	npm install grunt-jscs --save-dev
+	npm install karma karma-coverage --save-dev
 
 > Launch localhost@8000: grunt serve
 
