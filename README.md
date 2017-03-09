@@ -51,7 +51,11 @@ sudo ./mongo (client) (in new terminal)
 > Download Angular: sudo npm install angular
             		bower install angular
 > Download Mongoose: sudo npm install mongoose
-			bower install mongoose
+					bower install mongoose
+> Download Moment: sudo npm install moment
+					bower install moment
+> Download bootstrap: sudo npm install bootsrap
+					bower install bootsrap
 
 > Launch localhost@8000: grunt serve
 
