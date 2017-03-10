@@ -17,7 +17,7 @@ var multer = require('multer');
 /**
  * Mongoose ORM for MongoDB
  */
-mongoose.connect('127.0.0.1:27017/data/db/test');
+mongoose.connect('localhost:27017/data/db/vs');
 
 var app = express();
 
