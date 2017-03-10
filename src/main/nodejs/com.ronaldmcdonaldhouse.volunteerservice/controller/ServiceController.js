@@ -9,6 +9,7 @@ var router = express.Router();
  */
 var Service = require('../models/Service.js');
 
+
 /**
  * HTTP GET: /service
  * Return all service data
@@ -27,6 +28,7 @@ router.get('/', function(req, res) {
 router.get('/:date', function(req, res) {
     Service.find({date: req.params.date}, function (err, service_data) {
         if(err) throw err;
+        service_data.save();
         res.send(service_data);
     });
 });
@@ -63,10 +65,20 @@ router.post('/new', function(req, res) {
  */
 router.post('/update', function(req, res) {
     Service.update({
+            service_id: req.body.service_id,
+            calendar_id: req.body.calendar_id,
+            service_status: req.body.service_status,
+            date: req.body.date,
+            year: req.body.year,
+            month: req.body.month,
+            day: req.body.day,
+            service_category: req.body.service_category,
+            service_order: req.body.service_order,
+            queue: req.body.queue,
+            queue_order: req.body.queue_order,
             full_name: req.body.full_name,
             service_name: req.body.service_name,
-            service_description: req.body.service_description,
-            service_status: req.body.service_status
+            service_description: req.body.service_description
         },
         req.body, function(err, service_data) {
         if(err) throw err;

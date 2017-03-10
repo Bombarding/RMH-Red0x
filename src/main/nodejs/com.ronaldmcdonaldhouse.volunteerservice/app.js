@@ -9,22 +9,32 @@ var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var cors = require("cors");
 var errorhandler = require('errorhandler');
-var methodOverride = require('method-override');
-var multer = require('multer');
 var express = require('express');
+var methodOverride = require('method-override');
 var mongoose = require('mongoose');
-var app = express();
+var multer = require('multer');
 
 /**
+ * Mongoose ORM for MongoDB
+ */
+ 
+ /**
  * Mongoose ORM for MongoDB Possible Fix?
  */
-
-mongoose.connect('mongodb://127.0.0.1:27017/vs');
+// with mongodb:// URI
 var db = mongoose.connection;
+//var db = mongoose.createConnection('mongodb://127.0.0.1:27017/vs');
+/*Error: mongoose.connect('mongodb://localhost:27017/volunteerservice');*/
+/*Error: mongoose.connect('mongodb://localhost:27017/volunteerservice');*/
+mongoose.connect('127.0.0.1:27017/volunteerservice');
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback() {
     console.log('Database Connection Successful');
 });
+
+//mongoose.connect('mongodb://localhost/volunteerservice')
+
+var app = express();
 
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded

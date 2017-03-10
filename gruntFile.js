@@ -19,7 +19,7 @@ module.exports = function (grunt) {
             keepalive : true
         };
         var travisOptions = process.env.TRAVIS && {
-            browsers : ['Firefox'],
+            browsers : ['Safari'],
             reporters : 'dots'
         };
         return grunt.util._.extend(options, customOptions, travisOptions);
