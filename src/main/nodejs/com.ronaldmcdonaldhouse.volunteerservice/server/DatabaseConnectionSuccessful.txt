@@ -1,0 +1,44 @@
+2017-03-10T16:56:00.360-0500 I NETWORK  [thread1] waiting for connections on port 27017
+2017-03-10T17:06:19.788-0500 I NETWORK  [thread1] connection accepted from 127.0.0.1:49534 #1 (1 connection now open)
+2017-03-10T17:06:19.798-0500 I NETWORK  [conn1] received client metadata from 127.0.0.1:49534 conn1: { driver: { name: "nodejs", version: "2.2.22" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "16.4.0" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.7" }
+2017-03-10T17:06:30.591-0500 I NETWORK  [thread1] connection accepted from 127.0.0.1:49535 #2 (2 connections now open)
+2017-03-10T17:06:30.599-0500 I NETWORK  [conn2] received client metadata from 127.0.0.1:49535 conn2: { driver: { name: "nodejs", version: "2.2.22" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "16.4.0" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.7" }
+2017-03-10T17:07:12.492-0500 I -        [conn2] end connection 127.0.0.1:49535 (2 connections now open)
+//Init Attempt
+
+//Currently Running Server Inside Program. Initial Connection and Port reservation for website is confirmed.
+2017-03-10T17:08:24.309-0500 I NETWORK  [thread1] connection accepted from 127.0.0.1:49536 #3 (1 connection now open)
+2017-03-10T17:08:24.318-0500 I NETWORK  [conn3] received client metadata from 127.0.0.1:49536 conn3: { driver: { name: "nodejs", version: "2.2.22" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "16.4.0" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.7" }
+
+//confirmation However might be issue. Had multiple connections from program to database. Ending init Connection
+/usr/local/bin/node /Users/Alex/RMH-Red0x/src/main/nodejs/com.ronaldmcdonaldhouse.volunteerservice/app.js
+Database Connection Successful
+2017-03-10T17:09:46.375-0500 I NETWORK  [thread1] connection accepted from 127.0.0.1:49538 #4 (2 connections now open)
+2017-03-10T17:09:46.384-0500 I NETWORK  [conn4] received client metadata from 127.0.0.1:49538 conn4: { driver: { name: "nodejs", version: "2.2.22" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "16.4.0" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.7" }
+2017-03-10T17:10:22.030-0500 I -        [conn4] end connection 127.0.0.1:49538 (2 connections now open)
+
+//End Init
+2 connections now open)
+2017-03-10T17:11:45.089-0500 I -        [conn3] end connection 127.0.0.1:49536 (1 connection now open)
+//Final Connection open is the actual server of the database.
+
+*Think, Why is it routing 127.0.0.1:49536*
+
+//Restart Connection 1 instance.
+
+/usr/local/bin/node /Users/Alex/RMH-Red0x/src/main/nodejs/com.ronaldmcdonaldhouse.volunteerservice/server/www.js
+Ronald McDonald House Volunteer Service
+┈┈┈┈╱▔▔▔▔▔▔╲┈╭━━━╮┈┈┈
+┈┈┈▕┈╭━╮╭━╮┈▏┃BOO┃┈┈┈
+┈┈┈▕┈┃╭╯╰╮┃┈▏╰┳━━╯┈┈┈
+┈┈┈▕┈╰╯╭╮╰╯┈▏┈┃┈┈┈┈┈┈
+┈┈┈▕┈┈┈┃┃┈┈┈▏━╯┈┈┈┈┈┈
+┈┈┈▕┈┈┈╰╯┈┈┈▏┈┈┈┈┈┈┈┈
+┈┈┈▕╱╲╱╲╱╲╱╲▏┈┈┈┈┈┈┈┈
+Database Connection Successful
+
+:::Results:::
+::Successful::
+2017-03-10T17:12:59.304-0500 I NETWORK  [thread1] connection accepted from 127.0.0.1:49540 #5 (1 connection now open)
+2017-03-10T17:12:59.313-0500 I NETWORK  [conn5] received client metadata from 127.0.0.1:49540 conn5: { driver: { name: "nodejs", version: "2.2.22" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "16.4.0" }, platform: "Node.js v6.9.5, LE, mongodb-core: 2.1.7" }
+
