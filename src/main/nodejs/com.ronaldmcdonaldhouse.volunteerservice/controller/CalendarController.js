@@ -63,7 +63,12 @@ router.post('/new', function(req, res) {
  * Update an existing calendar
  */
 router.post('/update', function(req, res) {
-    Calendar.update({/*TODO*/}, {/*TODO*/}, function(err, calendar_data) {
+    Calendar.update({
+        calendar_id: req.body.calendar_id,
+            service_ids: req.body.service_ids,
+            year: req.body.year,
+            month: req.body.year
+    }, function(err, calendar_data) {
         if(err) throw err;
         res.send(calendar_data);
     });
