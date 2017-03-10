@@ -9,23 +9,22 @@ var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var cors = require("cors");
 var errorhandler = require('errorhandler');
-var express = require('express');
 var methodOverride = require('method-override');
-var mongoose = require('mongoose');
 var multer = require('multer');
+var express = require('express');
+var mongoose = require('mongoose');
+var app = express();
 
 /**
  * Mongoose ORM for MongoDB Possible Fix?
  */
-var mongo = require('mongodb');
-mongoose.connect('mongodb://127.0.0.1:27017/test');
+
+mongoose.connect('mongodb://127.0.0.1:27017/vs');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback() {
     console.log('Database Connection Successful');
 });
-
-var app = express();
 
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
