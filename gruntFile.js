@@ -19,9 +19,9 @@ module.exports = function (grunt) {
             keepalive : true
         };
         var travisOptions = process.env.TRAVIS && {
-                browsers : ['Safari'],
-                reporters : 'dots'
-            };
+            browsers : ['Firefox'],
+            reporters : 'dots'
+        };
         return grunt.util._.extend(options, customOptions, travisOptions);
     };
 
@@ -33,7 +33,7 @@ module.exports = function (grunt) {
             }
         },
         jshint : {
-            files : ['/src/main/angularjs/static/js/library/angular-material-calendar/angular-material-calendar.min.js'],
+            files : ['/src/main/angularjs/static/js/library/**/*.js'],
             options : {
                 curly : true,
                 devel : true,
@@ -63,7 +63,7 @@ module.exports = function (grunt) {
         },
         jscs : {
             all : [
-                ['src/main/angularjs/static/js/library/angular-material-calendar/calendar.js']
+                ['src/main/angularjs/static/js/library/**/*.js']
             ],
             options : {
                 config : '.jscsrc'
@@ -71,14 +71,14 @@ module.exports = function (grunt) {
         },
         uglify : {
             build : {
-                src : ['src/main/angularjs/static/js/library/angular-material-calendar/angular-material-calendar.min.js'],
+                src : ['src/main/angularjs/static/js/library/**/*.js'],
                 dest : 'calendar.min.js'
             }
         },
         connect : {
             server : {
                 options : {
-                    port : 27016,
+                    port : 8000,
                     open : true,
                     debug : true,
                     keepalive : true,
