@@ -19,37 +19,11 @@ var multer = require('multer');
  */
 var mongo = require('mongodb');
 mongoose.connect('mongodb://127.0.0.1:27017/test');
-//mongoose.connect('localhost','test');
-mongoose.on('error', console.error.bind(console, 'connection error:'));
-mongoose.once('open', function callback() {
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function callback() {
     console.log('Database Connection Successful');
 });
-
-var calendarSchema = new mongoose.Schema({
-    calendar_id: Number,
-    service_ids: Array,
-    year: Number,
-    month: Number
-});
-var serviceSchema = new mongoose.Schema({
-    service_id: Number,
-    calendar_id: Number,
-    service_status: String,
-    date: String,
-    year: Number,
-    month: Number,
-    day: Number,
-    service_category: String,
-    service_order: Number,
-    queue: Boolean,
-    queue_order: Number,
-    full_name: String,
-    service_name: String,
-    service_description: String
-});
-
-module.exports = mongoose.model('Service', serviceSchema, 'Service');
-module.exports = mongoose.model('Calendar', calendarSchema, 'Calendar');
 
 var app = express();
 
