@@ -8,7 +8,10 @@
   "main": "src/main/node.js/com.ronaldmcdonaldhouse.volunteerservice/server/www.js",
   "dependencies": {
     "angular-material-calendar": "^0.2.14",
-    "fullcalendar": "~2.7.1"
+    "cookie-parser": "^1.4.3",
+    "express-session": "^1.15.1",
+    "fullcalendar": "~2.7.1",
+    "mongoose": "^4.8.6"
   },
   "devDependencies": {
     "bower": "latest",

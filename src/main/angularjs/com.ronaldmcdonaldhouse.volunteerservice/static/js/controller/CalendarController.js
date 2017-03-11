@@ -164,7 +164,7 @@ volunteerService.controller('CalendarController', function($http, $scope, $compi
         $scope.getEventsMonth = function(month, year) {
             $http({
                 method: 'GET',
-                url: 'http://34.193.243.89:3000/service/' + month + '/' + year
+                url: 'http://localhost:8000/service/' + month + '/' + year
             }).then(function successCallback(response){
                 $scope.loadMonthEvents(response);
             }, function errorCallback(response) {
@@ -174,7 +174,7 @@ volunteerService.controller('CalendarController', function($http, $scope, $compi
         $scope.postEvent = function() {
             $http({
                 method: 'POST',
-                url: 'http://34.193.243.89:3000/service/new',
+                url: 'http://localhost:8000/service/new',
                 data: {
                     date: $scope.newDate,
                     year: $scope.year,
@@ -196,7 +196,7 @@ volunteerService.controller('CalendarController', function($http, $scope, $compi
         $scope.postEmail = function() {
             $http({
                 method: 'POST',
-                url: 'http://34.193.243.89:3000/email/send',
+                url: 'http://localhost:8000/email/send',
                 data: {
                     date: $scope.newDate,
                     year: $scope.year,
